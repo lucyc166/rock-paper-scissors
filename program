@@ -1,0 +1,28 @@
+import random
+a = raw_input()
+a = a.lower()
+list=["rock","paper","scissors"]
+p=(random.choice(list))
+if (a not in list):
+  print "Error, try typing rock, paper, or scissors"
+  exit()
+  
+print "computer plays " + p
+while p == a:
+  print "Tie, try again" 
+  p=(random.choice(list))
+  a = raw_input()
+  a = a.lower()
+  print "computer plays " + p
+  
+if a=="paper" and p == "scissors":
+  print "You lose! Try again."
+  exit()
+if a=="rock" and p == "paper":
+  print "You lose! Try again."
+  exit()
+if a=="scissors" and p == "rock":
+  print "You lose! Try again."
+  exit()
+else: 
+  print "You win!"
